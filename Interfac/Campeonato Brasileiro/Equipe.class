@@ -1,0 +1,51 @@
+// construir a equipe
+
+import java.util.Scanner;
+import java.util.Arrays;
+import java.lang.Comparable;
+// construir a classe e implemetar a comparação
+
+
+class Equipe implements Comparable<Equipe> {
+
+    String name;
+    int totalPoint;
+    int totalVictory;
+    int balanceGols;
+    int golsPro;
+    
+
+    public Equipe(String name, int totalPoint, int totalVictory, int balanceGols, int golsPro) {
+        this.name = name;
+        this.totalPoint = totalPoint;
+        this.totalVictory = totalVictory;
+        this.balanceGols = balanceGols;
+        this.golsPro = golsPro;
+    }
+// compara as equipes de forma geral, pegando cada característica e realizando a comparação
+
+
+    @Override
+    public int compareTo(Equipe o) {
+        if(o.totalPoint > this.totalPoint) return 1;
+        else if(o.totalPoint < this.totalPoint) return -1;
+        else if (o.totalVictory > this.totalVictory) return 1;
+        else if (o.totalVictory < this.totalVictory) return -1;
+        else if (o.balanceGols > this.balanceGols) return 1;
+        else if (o.balanceGols < this.balanceGols) return -1;
+        else return Integer.compare(o.golsPro, this.golsPro);
+    }
+// escrever as caracteristicas de cada equipe, literalmente tudo
+
+
+    @Override
+    public String toString() {
+        return "Equipe [" +
+                "nome=" + name +
+                ", totalPontos=" + totalPoint +
+                ", totalVitorias=" + totalVictory +
+                ", saldoGols=" + balanceGols +
+                ", golsPro=" + golsPro +
+                ']';
+    }
+}

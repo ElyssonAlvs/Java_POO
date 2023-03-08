@@ -1,0 +1,35 @@
+public class Terceirizado extends Empregado {
+    private Double despesaAdicional;
+    
+// a classe terceirizado herdar caracteristicas do empregado
+// noção de hirarquia
+    
+    public Terceirizado(String nome, Integer horas, 
+        Double valorPorHora, Double despesaAdicional) 
+    {
+        super.setNome(nome);
+        super.setHoras(horas);
+        super.setValorPorHora(valorPorHora);
+        this.despesaAdicional = despesaAdicional;
+    }
+
+    public Double getDespesaAdicional() {
+        return despesaAdicional;
+    }
+
+    public void setDespesaAdicional(Double despesaAdicional) {
+        this.despesaAdicional = despesaAdicional;
+    }
+
+    @Override
+    public Double pagamento() {
+        return super.pagamento()+(despesaAdicional*1.1);
+    }
+
+// Vai escrever a despesa adicional referente ao empregado
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Despesa adicional: " + despesaAdicional;
+    }
+}

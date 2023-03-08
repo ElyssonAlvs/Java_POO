@@ -1,0 +1,64 @@
+// contruir o corpo do circulo
+// herdando as caracteristicas do "shape" (em pleno 2022)
+
+
+class Circulo extends Shape{
+    
+    Ponto2D center;
+    double raio;
+
+    Circulo(double x, double y, double raio){
+        
+        center = new Ponto2D(x, y);
+        this.raio = raio;
+        
+    }
+
+    Circulo(Ponto2D center, double raio){
+        
+        this.center = center;
+        this.raio = raio;
+        
+    }
+// calcular a area do circulus
+
+
+    @Override
+    double area() {
+        
+        return Math.PI * Math.pow(raio,2);
+        
+    }
+// calcular o perimetros do ciculusis
+
+
+    @Override
+    double perimeter() {
+        
+        return 2 * Math.PI * raio;
+        
+    }
+// ver se o ponto está dentro do objeto de volta completa
+
+
+    @Override
+    boolean inside(Ponto2D p) {
+        
+        double dx = p.getX() - center.getX();
+        
+        double dy = p.getY() - center.getY();
+        
+        return Math.sqrt(Math.pow(dx,2)+Math.pow(dy,2)) <= raio;
+        
+    }
+// escrever as conclusões
+
+
+    public String toString(){
+        
+        return String.format("Círculo com centro em %s e raio %.1f",
+        center
+        , raio);
+        
+    }
+}

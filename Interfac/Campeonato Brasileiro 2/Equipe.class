@@ -1,0 +1,37 @@
+// contruir a equipe para o campeonato
+
+class Equipe {
+    
+    String name;
+    int totalPoint;
+    int totalVictory;
+    int balanceGols;
+    int golsPro;
+// corpo da equipe dentro do campeonato, com as suas caractrísticas;
+
+    public Equipe(String name, int totalPoint, int totalVictory, int balanceGols, int golsPro) {
+        
+        this.name = name;
+        this.totalPoint = totalPoint;
+        this.totalVictory = totalVictory;
+        this.balanceGols = balanceGols;
+        this.golsPro = golsPro;
+        
+    }
+// Escrever as caracteristicas das equipes, literalmente suas características, nome, quantidade, ponto,vitórias,etc;
+
+
+    @Override
+    public String toString() {
+        
+        return "Equipe [" +
+                "nome=" + name +
+                ", totalPontos=" + totalPoint +
+                ", totalVitorias=" + totalVictory +
+                ", saldoGols=" + balanceGols +
+                ", golsPro=" + golsPro +
+                ']';
+                
+    }
+    
+}

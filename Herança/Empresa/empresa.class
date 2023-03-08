@@ -1,0 +1,44 @@
+// contruir a empresa
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Empresa{
+    
+    // um vetor com os empregados
+    
+    ArrayList<Empregado> funcionarios = new ArrayList<Empregado>();    
+
+    Empresa(){
+        
+    }
+
+    public void adicionaEmpregado(Empregado e){
+        funcionarios.add(e);
+    }
+    
+//monstrar a empresa 
+
+
+    public void mostraEmpregado(){
+        System.out.println("Empresa: ");
+        for(Empregado funcionario: funcionarios){
+            System.out.println(funcionario);
+        }
+    }
+// calcular o pagamento
+
+
+    public double calculaFolha(){
+        double pagAux = 0;
+        for(Empregado funcionario: funcionarios){
+            pagAux += funcionario.pagamento();
+        }
+            return pagAux;
+    }
+
+
+}

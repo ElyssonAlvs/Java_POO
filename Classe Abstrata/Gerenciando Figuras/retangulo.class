@@ -1,0 +1,59 @@
+// construindo o retangulo herdando as caracteristicas do shape
+
+
+class Retangulo extends Shape{
+    
+    Ponto2D inferiorEsquerdo;
+    Ponto2D superiorDireito;
+// como retangulu tem mais ponto para estudar, é criado ponto dentro do cartesiano em que ele existe
+
+
+    Retangulo(double x1, double y1, double x2, double y2){
+        
+        inferiorEsquerdo = new Ponto2D(x1,y1);
+        superiorDireito = new Ponto2D(x2,y2);
+        
+    }
+
+    Retangulo(Ponto2D inferiorEsquerdo, Ponto2D superiorDireito){
+        
+        this.inferiorEsquerdo = inferiorEsquerdo;
+        this.superiorDireito = superiorDireito;
+        
+    }
+// calcular a area do rentagulus
+
+//sobrescrevendo um método e não criando um novo
+    @Override
+    double area() {
+        
+        return (superiorDireito.getY() - inferiorEsquerdo.getY()) * (superiorDireito.getX() - inferiorEsquerdo.getX());
+        
+    }
+//calcular o perimetro do retangulus
+    @Override
+    double perimeter() {
+        
+        return 2 * (superiorDireito.getY() - inferiorEsquerdo.getY()) + 2 * (superiorDireito.getX() - inferiorEsquerdo.getX());
+        
+    }
+    
+// verifificar se os ponto estão dentro do retangulus
+
+
+
+    @Override
+    boolean inside(Ponto2D p) {
+        
+        return (p.getX() <= superiorDireito.getX() && p.getX() >= inferiorEsquerdo.getX()) && (p.getY() <= superiorDireito.getY() && p.getY() >= inferiorEsquerdo.getY());
+        
+    }
+
+// monstra os cantos do retangulus
+
+    public String toString(){
+        
+        return String.format("Retângulo com cantos %s e %s", inferiorEsquerdo, superiorDireito);
+        
+    }
+}

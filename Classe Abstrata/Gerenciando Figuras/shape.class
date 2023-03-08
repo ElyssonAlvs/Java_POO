@@ -1,0 +1,13 @@
+// contruir o corpo da figura
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+abstract class Shape{
+    
+    abstract double area();
+    abstract double perimeter();
+    abstract boolean inside(Ponto2D p);
+    
+}
