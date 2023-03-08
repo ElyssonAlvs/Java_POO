@@ -1,0 +1,85 @@
+#__case subindo e buzinando
+$show
+power:1, time:0, person:(empty)
+
+#__case buzinando
+$honk
+Pem
+#__case subindo
+$enter marcos 4
+$show
+power:1, time:0, person:(marcos:4)
+
+#__case ocupada
+$enter marisa 2
+fail: busy motorcycle
+
+$show
+power:1, time:0, person:(marcos:4)
+$end
+#__case subindo2
+$init 5
+$show
+power:5, time:0, person:(empty)
+
+#__case buzinando
+$enter marcos 4
+$show
+power:5, time:0, person:(marcos:4)
+$honk
+Peeeeem
+$end
+#__case subindo e trocando
+$init 7
+$enter heitor 6
+$show
+power:7, time:0, person:(heitor:6)
+$leave
+heitor:6
+
+#__case empty
+$leave
+fail: empty motorcycle
+
+#__case replace
+$enter suzana 8
+$show
+power:7, time:0, person:(suzana:8)
+$end
+#__case no time
+$init 7
+$enter suzana 8
+$drive 10
+fail: buy time first
+
+#__case buying
+$buy 40
+$show
+power:7, time:40, person:(suzana:8)
+
+#__case driving
+$drive 20
+$show
+power:7, time:20, person:(suzana:8)
+$end
+#__case limite de idade
+$init 7
+$buy 20
+$enter andreina 23
+$drive 15
+fail: too old to drive
+$show
+power:7, time:20, person:(andreina:23)
+$end
+#__case acabou o tempo
+$init 7
+$buy 20
+$enter andreina 6
+$drive 15
+$show
+power:7, time:5, person:(andreina:6)
+$drive 10
+fail: time finished after 5 minutes
+$show
+power:7, time:0, person:(andreina:6)
+$end

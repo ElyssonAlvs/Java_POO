@@ -1,0 +1,27 @@
+$init 2 10
+$addArmadilha 2
+$addArmadilha 4
+$addArmadilha 8
+$show
+PosJogador[1] = 0
+PosJogador[2] = 0
+
+$addMove 1 1
+O jogador 1 vai para a casa 2
+O jogador 1 caiu em um armadilha
+$addMove 3 4
+O jogador 2 vai para a casa 7
+$addMove 1 2
+O jogador 1 passa a vez
+O jogador 2 vai para a casa 10
+$addMove 6 5
+O jogador 1 vai para a casa 13
+O jogador 1 venceu o jogo
+show
+$show
+PosJogador[1] = 13
+PosJogador[2] = 10
+
+$addMove 3 7
+O jogo acabou
+$end

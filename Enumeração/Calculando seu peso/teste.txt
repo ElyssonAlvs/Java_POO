@@ -1,0 +1,10 @@
+$init Jefferson 68 EARTH
+$show
+nome: Jefferson mass: 68.00 planeta: EARTH
+$massaEquivalente MARS
+A forca gravitacional no planeta MARS é 3.71
+25.75
+$massaEquivalente JUPITER
+A forca gravitacional no planeta JUPITER é 24.81
+172.08
+$end

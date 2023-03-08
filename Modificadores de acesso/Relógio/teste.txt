@@ -1,0 +1,27 @@
+#__case set
+$show
+00:00:00
+
+$set 10 02 30
+$show 
+10:02:30
+
+#__case error
+
+$set 25 70 90
+fail: hora invalida
+fail: minuto invalido
+fail: segundo invalido
+
+$show
+10:02:30
+
+$set 15 59 59
+
+#__case next
+$show
+15:59:59
+
+$next
+$show
+16:00:00
