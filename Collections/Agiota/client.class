@@ -1,0 +1,44 @@
+// construir o cliente para o masqueico angolano
+
+public class Client {
+    private int balance;
+    private String codename;
+    private int limit;
+// caracteristicas do cliente, apenas nome e o limite do cartão
+
+    public Client(String codename, int limit) {
+        
+        this.codename = codename;
+        this.limit = limit;
+        
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public String getCodename() {
+        return codename;
+    }
+
+    public void setCodename(String codename) {
+        this.codename = codename;
+    }
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
+    }
+// escrever os dados do escravo do agiota manki
+    @Override
+    public String toString() {
+        return "- " + getCodename() + ":" + getBalance() + "/" + getLimit();
+    }
+}
