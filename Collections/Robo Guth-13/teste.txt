@@ -1,0 +1,18 @@
+O pequeno robô Guth-13 está explorando ruínas antigas da cidade de Quixadá.
+Ele encontrou um pedaço de papel com uma palavra escrita nele. Felizmente,
+as pessoas que viviam neste local há milhares de anos usavam apenas duas letras
+do alfabeto moderno: ‘a’ e ‘b’. Sabe-se também que nenhuma palavra antiga contém
+duas letras ‘a’ seguidas. Guth-13 já reconheceu algumas das letras da palavra, as
+outras ainda são desconhecidas.
+
+Guth-13 quer listar todas as palavras válidas que poderiam ser escritas neste papel
+em um dicionário antigo. Ele precisa de sua ajuda. Liste todas as palavras válidas que
+pode ser escrita no papel em ordem alfabética.
+------------------------------------------------------------------------------------------
+Entrada
+    ??a??b
+Saída
+    ababab
+    ababbb
+    bbabab
+    bbabbb
